@@ -1,0 +1,83 @@
+{
+  "name": "google_rawgrass_translator",
+  "productName": "Google_raw_grass_translator",
+  "version": "1.0.0",
+  "description": "A raw grass translate application.",
+  "main": "./src/main.js",
+  "scripts": {
+    "serve": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "packdep": "electron-builder install-app-deps"
+  },
+  "keywords": [
+    "electron",
+    "google",
+    "translator",
+    "raw grass"
+  ],
+  "author": "Ijusthahaha",
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
+      "electronPackagerConfig": {
+        "packageManager": "yarn"
+      },
+      "electronWinstallerConfig": {
+        "name": "google_rawgrass_translator"
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "",
+        "name": ""
+      },
+      "windowsStoreConfig": {
+        "packageName": "",
+        "name": "google_rawgrass_translator"
+      }
+    }
+  },
+  "dependencies": {
+    "@electron/remote": "^2.0.8",
+    "@vitalets/google-translate-api": "^8.0.0",
+    "babel-eslint": "^10.1.0",
+    "electron-compile": "^6.4.4",
+    "electron-compilers": "^5.9.0",
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "electron": "^19.0.10",
+    "electron-builder": "^23.1.0",
+    "electron-prebuilt-compile": "8.2.0"
+  },
+  "build": {
+    "productName": "Google_rawgrass_translator",
+    "appId": "Google_grass_translator.app",
+    "copyright": "Made by Ijusthahaha.",
+    "directories": {
+      "output": "build"
+    },
+    "win": {
+      "icon": "./favicon.ico",
+      "target": {
+        "target": "portable",
+        "arch": [
+          "x64"
+        ]
+      }
+    }
+  }
+}
