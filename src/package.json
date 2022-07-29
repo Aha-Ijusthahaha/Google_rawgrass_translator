@@ -1,0 +1,9 @@
+{
+  "name": "google_grass_translator",
+  "version": "1.0.0",
+  "description": "A raw grass translate application.",
+  "author": "Ijusthahaha",
+  "license": "MIT",
+  "main": "./main.js",
+  "dependencies": {}
+}
